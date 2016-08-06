@@ -15,7 +15,7 @@
     <string name="pref_location_label">Location</string>
     <!-- Key name for storing location in SharedPreferences -->
     <string name="pref_location_key" translatable="false">location</string>
-    <!-- Default postal code for location preference -->
+    <!-- Default location -->
     <string name="pref_location_default" translatable="false">141070</string>
 
     <!-- Label for the temperature preference [CHAR LIMIT=30] -->
@@ -24,5 +24,7 @@
     <string name="pref_temperature_key" translatable="false">temperatureUnits</string>
     <!-- Default temperature metric -->
     <string name="pref_temperature_default" translatable="false">1</string>
+    <string name="action_city">City</string>
+
 
 </resources>
