@@ -14,92 +14,72 @@ public class City {
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     /**
-     *
-     * @return
-     * The id
+     * @return The id
      */
     public Integer getId() {
         return id;
     }
 
     /**
-     *
-     * @param id
-     * The id
+     * @param id The id
      */
     public void setId(Integer id) {
         this.id = id;
     }
 
     /**
-     *
-     * @return
-     * The name
+     * @return The name
      */
     public String getName() {
         return name;
     }
 
     /**
-     *
-     * @param name
-     * The name
+     * @param name The name
      */
     public void setName(String name) {
         this.name = name;
     }
 
     /**
-     *
-     * @return
-     * The coord
+     * @return The coord
      */
     public Coord getCoord() {
         return coord;
     }
 
     /**
-     *
-     * @param coord
-     * The coord
+     * @param coord The coord
      */
     public void setCoord(Coord coord) {
         this.coord = coord;
     }
 
     /**
-     *
-     * @return
-     * The country
+     * @return The country
      */
     public String getCountry() {
         return country;
     }
 
     /**
-     *
-     * @param country
-     * The country
+     * @param country The country
      */
     public void setCountry(String country) {
         this.country = country;
     }
 
     /**
-     *
-     * @return
-     * The population
+     * @return The population
      */
     public Integer getPopulation() {
         return population;
     }
 
     /**
-     *
-     * @param population
-     * The population
+     * @param population The population
      */
-    public void setPopulation(int population){
+    public void setPopulation(int population) {
         this.population = population;
     }
 

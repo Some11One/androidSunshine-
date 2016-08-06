@@ -131,7 +131,7 @@ public class ForecastFragment extends Fragment implements Callback<Forecast> {
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        inflater.inflate(R.menu.forecastfragmentmenu, menu);
+        inflater.inflate(R.menu.forecastfragment, menu);
     }
 
     @Override
@@ -220,12 +220,14 @@ public class ForecastFragment extends Fragment implements Callback<Forecast> {
         if (!savedCity.contains(weatherPostalCode)){
             // ask to add city
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-            builder.setMessage("Save location?")
+            builder.setMessage("Save location: " + getCity(weatherPostalCode) + "?")
                     .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            savedCity.add(weatherPostalCode);
-                            sharedPreferences.edit().putStringSet(SAVED_CITIES_KEY, savedCity).apply();
+                            Set<String> newSavedCities = new HashSet<>(savedCity.size() + 1);
+                            newSavedCities.addAll(savedCity);
+                            newSavedCities.add(weatherPostalCode);
+                            sharedPreferences.edit().putStringSet(SAVED_CITIES_KEY, newSavedCities).apply();
                         }
                     })
                     .setNegativeButton("No", new DialogInterface.OnClickListener(){
